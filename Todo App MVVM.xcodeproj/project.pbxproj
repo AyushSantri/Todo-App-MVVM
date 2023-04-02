@@ -58,9 +58,11 @@
 		BF8DAF5229DA04860025C771 /* Todo App MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BF8DAF6C29DA09100025C771 /* View */,
+				BF8DAF6B29DA08F00025C771 /* ViewModel */,
+				BF8DAF6A29DA08E70025C771 /* Model */,
 				BF8DAF5329DA04860025C771 /* AppDelegate.swift */,
 				BF8DAF5529DA04860025C771 /* SceneDelegate.swift */,
-				BF8DAF5729DA04860025C771 /* ViewController.swift */,
 				BF8DAF5929DA04860025C771 /* Main.storyboard */,
 				BF8DAF5F29DA04870025C771 /* Assets.xcassets */,
 				BF8DAF6129DA04870025C771 /* LaunchScreen.storyboard */,
@@ -68,6 +70,44 @@
 				BF8DAF5C29DA04860025C771 /* Todo_App_MVVM.xcdatamodeld */,
 			);
 			path = "Todo App MVVM";
+			sourceTree = "<group>";
+		};
+		BF8DAF6A29DA08E70025C771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF8DAF6B29DA08F00025C771 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF8DAF6C29DA09100025C771 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF8DAF6E29DA0B750025C771 /* CustomViews */,
+				BF8DAF6D29DA0B680025C771 /* ViewControllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF8DAF6D29DA0B680025C771 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF8DAF5729DA04860025C771 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF8DAF6E29DA0B750025C771 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
