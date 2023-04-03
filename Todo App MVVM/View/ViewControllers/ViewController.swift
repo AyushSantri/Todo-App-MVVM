@@ -14,7 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        
+        navigationItem.title = "TODO App"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToNextScreen))
     }
+    
+    @objc func goToNextScreen() {
+    }
+
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
