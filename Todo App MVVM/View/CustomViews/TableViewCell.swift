@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setUpLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -20,15 +21,17 @@ class TableViewCell: UITableViewCell {
     
     let lable : UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 25, weight: .medium, width: .condensed)
+        label.font = .systemFont(ofSize: 25, weight: .medium, width: .standard)
         label.textColor = .label
-        label.text = "Ayush Santri is Cool"
+        label.text = "Ayush Santri is Cool but wont say a thing"
         return label
     }()
 }
 
 extension TableViewCell {
     private func setUpLabel() {
+        contentView.addSubview(lable)
+        
         lable.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

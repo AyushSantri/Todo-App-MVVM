@@ -15,9 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUpTable()
     }
+}
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     private func setUpTable() {
         view.addSubview(tableView)
+        
+        tableView.rowHeight = 50
+        
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,9 +38,7 @@ class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -42,7 +46,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
+            fatalError("error in custom cell")
+        }
         
+        return cell
     }
 }
 
