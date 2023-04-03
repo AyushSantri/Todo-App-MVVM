@@ -12,7 +12,10 @@ class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(lable)
+        contentView.addSubview(button)
         setUpLabel()
+        setButton()
     }
     
     required init?(coder: NSCoder) {
@@ -23,22 +26,44 @@ class TableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 25, weight: .medium, width: .standard)
         label.textColor = .label
-        label.text = "Ayush Santri is Cool but wont say a thing"
+        label.text = "Ayush Santri is sick as funch jnoihjoiwqd"
+        
+        
         return label
+    }()
+    
+    let button : UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("read more", for: .normal)
+   
+        return button
     }()
 }
 
 extension TableViewCell {
     private func setUpLabel() {
-        contentView.addSubview(lable)
         
         lable.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             lable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            lable.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            lable.trailingAnchor.constraint(equalTo: button.leadingAnchor),
             lable.topAnchor.constraint(equalTo: contentView.topAnchor),
-            lable.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            lable.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            lable.widthAnchor.constraint(equalToConstant: 250)
+        ])
+    }
+    
+    private func setButton() {
+        
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            button.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+            button.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -7),
         ])
     }
 }
