@@ -12,10 +12,7 @@ class TableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(lable)
-        contentView.addSubview(button)
-        setUpLabel()
-        setButton()
+        addViews()
     }
     
     required init?(coder: NSCoder) {
@@ -41,6 +38,14 @@ class TableViewCell: UITableViewCell {
 }
 
 extension TableViewCell {
+    private func addViews() {
+        contentView.addSubview(lable)
+        contentView.addSubview(button)
+        
+        setUpLabel()
+        setButton()
+    }
+    
     private func setUpLabel() {
         
         lable.translatesAutoresizingMaskIntoConstraints = false
