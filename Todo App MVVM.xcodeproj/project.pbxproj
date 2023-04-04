@@ -15,6 +15,8 @@
 		BF8DAF6029DA04870025C771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8DAF5F29DA04870025C771 /* Assets.xcassets */; };
 		BF8DAF6329DA04870025C771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8DAF6129DA04870025C771 /* LaunchScreen.storyboard */; };
 		BFFC25AC29DB0C5B00F3E0F3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */; };
+		BFFC25AF29DC849300F3E0F3 /* AddDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC25AD29DC849300F3E0F3 /* AddDataController.swift */; };
+		BFFC25B029DC849300F3E0F3 /* AddDataController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFC25AE29DC849300F3E0F3 /* AddDataController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BF8DAF6229DA04870025C771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF8DAF6429DA04870025C771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BFFC25AD29DC849300F3E0F3 /* AddDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataController.swift; sourceTree = "<group>"; };
+		BFFC25AE29DC849300F3E0F3 /* AddDataController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDataController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		BF8DAF6D29DA0B680025C771 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFFC25B129DC849900F3E0F3 /* add data */,
 				BF8DAF5729DA04860025C771 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -111,6 +116,15 @@
 				BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		BFFC25B129DC849900F3E0F3 /* add data */ = {
+			isa = PBXGroup;
+			children = (
+				BFFC25AD29DC849300F3E0F3 /* AddDataController.swift */,
+				BFFC25AE29DC849300F3E0F3 /* AddDataController.xib */,
+			);
+			path = "add data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF8DAF6329DA04870025C771 /* LaunchScreen.storyboard in Resources */,
+				BFFC25B029DC849300F3E0F3 /* AddDataController.xib in Resources */,
 				BF8DAF6029DA04870025C771 /* Assets.xcassets in Resources */,
 				BF8DAF5B29DA04860025C771 /* Main.storyboard in Resources */,
 			);
@@ -187,6 +202,7 @@
 				BFFC25AC29DB0C5B00F3E0F3 /* TableViewCell.swift in Sources */,
 				BF8DAF5829DA04860025C771 /* ViewController.swift in Sources */,
 				BF8DAF5E29DA04860025C771 /* Todo_App_MVVM.xcdatamodeld in Sources */,
+				BFFC25AF29DC849300F3E0F3 /* AddDataController.swift in Sources */,
 				BF8DAF5429DA04860025C771 /* AppDelegate.swift in Sources */,
 				BF8DAF5629DA04860025C771 /* SceneDelegate.swift in Sources */,
 			);
