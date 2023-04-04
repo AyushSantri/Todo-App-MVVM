@@ -60,5 +60,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let addDataController = AddDataController()
+        
+        addDataController.modalPresentationStyle = .pageSheet
+        addDataController.sheetPresentationController?.detents = [.medium()]
+        addDataController.sheetPresentationController?.prefersGrabberVisible = true
+        
+        present(addDataController, animated: true)
+    }
 }
 

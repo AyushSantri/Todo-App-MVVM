@@ -11,6 +11,7 @@ class AddDataController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Add Task"
         setupTextField()
     }
     

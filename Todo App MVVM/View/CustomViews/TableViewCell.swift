@@ -29,18 +29,29 @@ class TableViewCell: UITableViewCell {
         return label
     }()
     
-    let button : UIButton = {
-        let button = UIButton(type: .roundedRect)
-        button.setTitle("read more", for: .normal)
-   
-        return button
+    let smallLabel : UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .regular, width: .standard)
+        label.textColor = .systemBlue
+        label.text = "read more"
+        
+        
+        return label
     }()
+    
+    @objc func presentPagetile() {
+        let addDataController = AddDataController()
+        
+        addDataController.modalPresentationStyle = .pageSheet
+        addDataController.sheetPresentationController?.detents = [.medium()]
+        addDataController.sheetPresentationController?.prefersGrabberVisible = true
+    }
 }
 
 extension TableViewCell {
     private func addViews() {
         contentView.addSubview(lable)
-        contentView.addSubview(button)
+        contentView.addSubview(smallLabel)
         
         setUpLabel()
         setButton()
@@ -52,7 +63,7 @@ extension TableViewCell {
         
         NSLayoutConstraint.activate([
             lable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            lable.trailingAnchor.constraint(equalTo: button.leadingAnchor),
+            lable.trailingAnchor.constraint(equalTo: smallLabel.leadingAnchor, constant: -20),
             lable.topAnchor.constraint(equalTo: contentView.topAnchor),
             lable.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
@@ -63,12 +74,12 @@ extension TableViewCell {
     private func setButton() {
         
         
-        button.translatesAutoresizingMaskIntoConstraints = false
+        smallLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            button.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            button.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -7),
+            smallLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            smallLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            smallLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
 }
