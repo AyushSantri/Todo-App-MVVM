@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let tableView : UITableView = UITableView()
+    let addDataController = AddDataController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     }
     
     @objc func goToNextScreen() {
+        navigationController?.pushViewController(addDataController, animated: true)
     }
 
 }
