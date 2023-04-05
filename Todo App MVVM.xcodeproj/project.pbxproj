@@ -17,6 +17,7 @@
 		BFFC25AC29DB0C5B00F3E0F3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */; };
 		BFFC25AF29DC849300F3E0F3 /* AddDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC25AD29DC849300F3E0F3 /* AddDataController.swift */; };
 		BFFC25B029DC849300F3E0F3 /* AddDataController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFC25AE29DC849300F3E0F3 /* AddDataController.xib */; };
+		BFFC25B529DDEDD800F3E0F3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFC25B429DDEDD800F3E0F3 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BFFC25AD29DC849300F3E0F3 /* AddDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataController.swift; sourceTree = "<group>"; };
 		BFFC25AE29DC849300F3E0F3 /* AddDataController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDataController.xib; sourceTree = "<group>"; };
+		BFFC25B429DDEDD800F3E0F3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFC25AB29DB0C5B00F3E0F3 /* TableViewCell.swift */,
+				BFFC25B429DDEDD800F3E0F3 /* CustomTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFC25B529DDEDD800F3E0F3 /* CustomTextField.swift in Sources */,
 				BFFC25AC29DB0C5B00F3E0F3 /* TableViewCell.swift in Sources */,
 				BF8DAF5829DA04860025C771 /* ViewController.swift in Sources */,
 				BF8DAF5E29DA04860025C771 /* Todo_App_MVVM.xcdatamodeld in Sources */,
