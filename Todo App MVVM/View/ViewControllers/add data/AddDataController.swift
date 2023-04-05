@@ -38,7 +38,7 @@ class AddDataController: UIViewController {
         textfield.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            textfield.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            textfield.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 25),
             textfield.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
             textfield.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
             textfield.heightAnchor.constraint(equalToConstant: 24*2.3)
