@@ -8,6 +8,7 @@
 import UIKit
 
 class AddDataController: UIViewController {
+    let arr : [String] = ["Enter title", "Enter discreption", "Priority"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,6 @@ class AddDataController: UIViewController {
         configureStackView()
     }
     
-    let customTextField = CustomTextField()
     let stackView = UIStackView()
     
     func configureStackView() {
@@ -23,6 +23,10 @@ class AddDataController: UIViewController {
         
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
+        stackView.spacing = 20
+        
+        addtextFieldInStackView()
+        setStackViewConstraints()
     }
     
     func setStackViewConstraints() {
@@ -34,5 +38,15 @@ class AddDataController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
+    }
+    
+    func addtextFieldInStackView() {
+        let numberOfField : Int = arr.count
+        
+        for i in 0...numberOfField {
+            let customTextField = CustomTextField()
+            customTextField.placeholder = arr[i]
+            stackView.addArrangedSubview(customTextField)
+        }
     }
 }
