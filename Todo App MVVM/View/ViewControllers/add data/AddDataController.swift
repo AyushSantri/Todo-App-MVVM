@@ -46,6 +46,10 @@ class AddDataController: UIViewController {
         for i in 0...numberOfField {
             let customTextField = CustomTextField()
             customTextField.placeholder = arr[i]
+            customTextField.resignFirstResponder()
+            if(arr[i] == "Priority") {
+                customTextField.keyboardType = .numberPad
+            }
             stackView.addArrangedSubview(customTextField)
         }
     }
