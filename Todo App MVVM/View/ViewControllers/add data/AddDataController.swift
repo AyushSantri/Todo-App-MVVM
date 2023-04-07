@@ -41,7 +41,7 @@ class AddDataController: UIViewController {
     }
     
     func addtextFieldInStackView() {
-        let numberOfField : Int = arr.count
+        let numberOfField : Int = arr.count-1
         
         for i in 0...numberOfField {
             let customTextField = CustomTextField()
