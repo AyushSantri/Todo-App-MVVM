@@ -12,14 +12,16 @@ class AddDataController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setScrollView()
         navigationItem.title = "Add Task"
         configureStackView()
     }
     
+    let scrollView = UIScrollView()
     let stackView = UIStackView()
     
     func configureStackView() {
-        view.addSubview(stackView)
+        scrollView.addSubview(stackView)
         
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -33,10 +35,26 @@ class AddDataController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+    }
+    
+    func setScrollView() {
+        view.addSubview(scrollView)
+        
+        scrollView.alwaysBounceVertical = true
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
     
