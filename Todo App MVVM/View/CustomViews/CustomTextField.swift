@@ -34,7 +34,6 @@ class CustomTextField: UITextField {
         layer.borderColor = UIColor.gray.cgColor
         layer.cornerRadius = 5
         autocorrectionType = .no
-        frame.size.height = 40
     }
 
 }

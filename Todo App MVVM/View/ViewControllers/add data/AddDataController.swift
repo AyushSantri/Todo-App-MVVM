@@ -37,9 +37,9 @@ class AddDataController: UIViewController {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -30)
         ])
     }
     
@@ -68,6 +68,7 @@ class AddDataController: UIViewController {
             if(arr[i] == "Priority") {
                 customTextField.keyboardType = .numberPad
             }
+            customTextField.heightAnchor.constraint(equalToConstant: 70).isActive = true
             stackView.addArrangedSubview(customTextField)
         }
     }
