@@ -63,13 +63,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let addDataController = AddDataController()
+        let showDetailedTODOViewController = showDetailedTODOViewController()
         
-        addDataController.modalPresentationStyle = .pageSheet
-        addDataController.sheetPresentationController?.detents = [.medium()]
-        addDataController.sheetPresentationController?.prefersGrabberVisible = true
+        showDetailedTODOViewController.modalPresentationStyle = .pageSheet
+        showDetailedTODOViewController.sheetPresentationController?.detents = [.medium()]
+        showDetailedTODOViewController.sheetPresentationController?.prefersGrabberVisible = true
         
-        present(addDataController, animated: true)
+        present(showDetailedTODOViewController, animated: true)
     }
 }
 
