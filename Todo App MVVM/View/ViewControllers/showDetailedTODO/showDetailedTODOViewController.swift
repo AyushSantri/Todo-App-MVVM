@@ -21,6 +21,10 @@ class showDetailedTODOViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         
+        titleLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        descriptionLabel.font = .systemFont(ofSize: 24, weight: .semibold)
+        descriptionLabel.numberOfLines = .max
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         
