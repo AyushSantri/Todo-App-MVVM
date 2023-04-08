@@ -16,6 +16,11 @@ class showDetailedTODOViewController: UIViewController {
         setUpLabel()
     }
     
+    func configure(title : String?, description : String?) {
+        self.titleLabel.text = title
+        self.descriptionLabel.text = description
+    }
+    
     
     func setUpLabel() {
         view.addSubview(titleLabel)
