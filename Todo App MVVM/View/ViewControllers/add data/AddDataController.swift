@@ -14,7 +14,14 @@ class AddDataController: UIViewController {
         super.viewDidLoad()
         setScrollView()
         navigationItem.title = "Add Task"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addDataToCoreData))
         configureStackView()
+    }
+    
+    @objc func addDataToCoreData() {
+        let vc = ViewController()
+        vc.addData(titleToAdd: "AYush", detailedTAsk: "I will not tell you", priority: 1)
+        navigationController?.popViewController(animated: true)
     }
     
     let scrollView = UIScrollView()

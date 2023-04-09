@@ -104,11 +104,11 @@ extension ViewController {
         }
     }
     
-    func addData(dataToAdd : TodoTask) {
+    func addData(titleToAdd : String, detailedTAsk : String, priority : Int16) {
         let todoTask = TodoTask(context: context)
-        todoTask.title = dataToAdd.title
-        todoTask.detailedTask = dataToAdd.detailedTask
-        todoTask.priority = dataToAdd.priority
+        todoTask.title = titleToAdd
+        todoTask.detailedTask = detailedTAsk
+        todoTask.priority = priority
         try! context.save()
         fetchData()
     }
