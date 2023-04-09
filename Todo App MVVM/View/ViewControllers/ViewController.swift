@@ -74,3 +74,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController {
+    func fetchData() {
+        do {
+            
+        }
+    }
+}
+
