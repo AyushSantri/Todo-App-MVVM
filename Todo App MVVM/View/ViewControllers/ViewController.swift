@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     let tableView : UITableView = UITableView()
     let addDataController = AddDataController()
