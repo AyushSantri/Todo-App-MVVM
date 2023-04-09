@@ -88,5 +88,11 @@ extension ViewController {
             self.tableView.reloadData()
         }
     }
+    
+    func deleteData(todoObj : TodoTask) {
+        context.delete(todoObj)
+        try! context.save()
+        fetchData()
+    }
 }
 
