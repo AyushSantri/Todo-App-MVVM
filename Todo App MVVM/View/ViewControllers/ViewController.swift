@@ -71,12 +71,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let showDetailedTODOViewController = showDetailedTODOViewController()
-        showDetailedTODOViewController.configure(title: "ayush title", description: "this is a title form view controller")
+        let data = todoArray[indexPath.row]
+        showDetailedTODOViewController.configure(title: data.title, description: data.detailedTask)
         showDetailedTODOViewController.modalPresentationStyle = .pageSheet
         showDetailedTODOViewController.sheetPresentationController?.detents = [.medium()]
         showDetailedTODOViewController.sheetPresentationController?.prefersGrabberVisible = true
         
         present(showDetailedTODOViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let todoObj = todoArray[indexPath.row]
+            
+            self.deleteData(todoObj: todoObj)
+        }
     }
 }
 
