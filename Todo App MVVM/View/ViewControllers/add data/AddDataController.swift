@@ -8,13 +8,15 @@
 import UIKit
 
 class AddDataController: UIViewController {
-    let arr : [String] = ["Enter title", "Enter discreption", "Priority"]
-
+    let field1 = CustomTextField()
+    let field2 = CustomTextField()
+    let field3 = CustomTextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setScrollView()
         navigationItem.title = "Add Task"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addDataToCoreData))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(addDataToCoreData))
         configureStackView()
     }
     
@@ -66,17 +68,23 @@ class AddDataController: UIViewController {
     }
     
     func addtextFieldInStackView() {
-        let numberOfField : Int = arr.count-1
         
-        for i in 0...numberOfField {
-            let customTextField = CustomTextField()
-            customTextField.placeholder = arr[i]
-            customTextField.resignFirstResponder()
-            if(arr[i] == "Priority") {
-                customTextField.keyboardType = .numberPad
-            }
-            customTextField.heightAnchor.constraint(equalToConstant: 70).isActive = true
-            stackView.addArrangedSubview(customTextField)
-        }
+        field1.resignFirstResponder()
+        field2.resignFirstResponder()
+        field3.resignFirstResponder()
+        
+        field1.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        field2.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        field3.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        
+        field1.placeholder = "Enter Title"
+        field2.placeholder = "Enter Description"
+        field3.placeholder = "Priority"
+        
+        field3.keyboardType = .numberPad
+        
+        stackView.addArrangedSubview(field1)
+        stackView.addArrangedSubview(field2)
+        stackView.addArrangedSubview(field3)
     }
 }
