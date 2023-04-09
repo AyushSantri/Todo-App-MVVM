@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var todoArray : [TodoTask] = []
     
     let tableView : UITableView = UITableView()
     let addDataController = AddDataController()
@@ -77,7 +78,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController {
     func fetchData() {
         do {
-            
+           try todoArray = context.fetch(TodoTask.fetchRequest())
+        }
+        catch let error as NSError{
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 }
