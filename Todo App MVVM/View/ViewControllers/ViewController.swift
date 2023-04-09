@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         
         navigationItem.title = "TODO App"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToNextScreen))
+        
+        fetchData()
     }
     
     @objc func goToNextScreen() {
@@ -81,13 +83,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController {
     func fetchData() {
         do {
-           try todoArray = context.fetch(TodoTask.fetchRequest())
+            try self.todoArray = context.fetch(TodoTask.fetchRequest())
         }
         catch let error as NSError{
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
         DispatchQueue.main.async {
+            print(self.todoArray)
             self.tableView.reloadData()
         }
     }
