@@ -89,6 +89,15 @@ extension ViewController {
         }
     }
     
+    func addData(dataToAdd : TodoTask) {
+        let todoTask = TodoTask(context: context)
+        todoTask.title = dataToAdd.title
+        todoTask.detailedTask = dataToAdd.detailedTask
+        todoTask.priority = dataToAdd.priority
+        try! context.save()
+        fetchData()
+    }
+    
     func deleteData(todoObj : TodoTask) {
         context.delete(todoObj)
         try! context.save()
