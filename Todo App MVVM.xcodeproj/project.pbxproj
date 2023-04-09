@@ -10,6 +10,8 @@
 		BF72748D29E1C93A00325E02 /* showDetailedTODOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72748B29E1C93A00325E02 /* showDetailedTODOViewController.swift */; };
 		BF72748E29E1C93A00325E02 /* showDetailedTODOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF72748C29E1C93A00325E02 /* showDetailedTODOViewController.xib */; };
 		BF72749029E1C9D400325E02 /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72748F29E1C9D400325E02 /* customLabel.swift */; };
+		BF72749629E300FB00325E02 /* TodoTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72749429E300FB00325E02 /* TodoTask+CoreDataClass.swift */; };
+		BF72749729E300FB00325E02 /* TodoTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72749529E300FB00325E02 /* TodoTask+CoreDataProperties.swift */; };
 		BF8DAF5429DA04860025C771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DAF5329DA04860025C771 /* AppDelegate.swift */; };
 		BF8DAF5629DA04860025C771 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DAF5529DA04860025C771 /* SceneDelegate.swift */; };
 		BF8DAF5829DA04860025C771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DAF5729DA04860025C771 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		BF72748B29E1C93A00325E02 /* showDetailedTODOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showDetailedTODOViewController.swift; sourceTree = "<group>"; };
 		BF72748C29E1C93A00325E02 /* showDetailedTODOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = showDetailedTODOViewController.xib; sourceTree = "<group>"; };
 		BF72748F29E1C9D400325E02 /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
+		BF72749429E300FB00325E02 /* TodoTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF72749529E300FB00325E02 /* TodoTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF8DAF5029DA04860025C771 /* Todo App MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8DAF5329DA04860025C771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF8DAF5529DA04860025C771 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 			path = showDetailedTODO;
 			sourceTree = "<group>";
 		};
+		BF72749829E3011C00325E02 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				BF72749429E300FB00325E02 /* TodoTask+CoreDataClass.swift */,
+				BF72749529E300FB00325E02 /* TodoTask+CoreDataProperties.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		BF8DAF4729DA04860025C771 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 		BF8DAF5229DA04860025C771 /* Todo App MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BF72749829E3011C00325E02 /* coreData */,
 				BF8DAF6C29DA09100025C771 /* View */,
 				BF8DAF6B29DA08F00025C771 /* ViewModel */,
 				BF8DAF6A29DA08E70025C771 /* Model */,
@@ -221,9 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFFC25B529DDEDD800F3E0F3 /* CustomTextField.swift in Sources */,
+				BF72749729E300FB00325E02 /* TodoTask+CoreDataProperties.swift in Sources */,
 				BF72749029E1C9D400325E02 /* customLabel.swift in Sources */,
 				BF72748D29E1C93A00325E02 /* showDetailedTODOViewController.swift in Sources */,
 				BFFC25AC29DB0C5B00F3E0F3 /* TableViewCell.swift in Sources */,
+				BF72749629E300FB00325E02 /* TodoTask+CoreDataClass.swift in Sources */,
 				BF8DAF5829DA04860025C771 /* ViewController.swift in Sources */,
 				BF8DAF5E29DA04860025C771 /* Todo_App_MVVM.xcdatamodeld in Sources */,
 				BFFC25AF29DC849300F3E0F3 /* AddDataController.swift in Sources */,
