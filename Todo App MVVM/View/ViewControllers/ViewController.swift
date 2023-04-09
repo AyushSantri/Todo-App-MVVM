@@ -50,7 +50,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return todoArray.count
     }
     
     
@@ -59,6 +59,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
             fatalError("error in custom cell")
         }
+        let data = todoArray[indexPath.row]
+        
+        cell.lable.text = data.title
         
         return cell
     }
