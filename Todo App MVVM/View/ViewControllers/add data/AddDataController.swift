@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol sendDataToAdd {
+    func addData(titleToAdd : String, detailedTAsk : String, priority : Int16)
+}
+
 class AddDataController: UIViewController {
     let field1 = CustomTextField()
     let field2 = CustomTextField()
     let field3 = CustomTextField()
+    var delegate : sendDataToAdd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +26,9 @@ class AddDataController: UIViewController {
     }
     
     @objc func addDataToCoreData() {
-        let vc = ViewController()
-        vc.addData(titleToAdd: "AYush", detailedTAsk: "I will not tell you", priority: 1)
+//        let vc = ViewController()
+//        vc.addData(titleToAdd: field1.text!, detailedTAsk: field2.text!, priority: Int16(field3.text!)!)
+        delegate!.addData(titleToAdd: field1.text!, detailedTAsk: field2.text!, priority: Int16(field3.text!)!)
         navigationController?.popViewController(animated: true)
     }
     
